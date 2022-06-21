@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+img {
+  border-radius: 500px;
+  width: 300px;
+}

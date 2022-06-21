@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Amatic SC";
+    src: url("../fonts/AmaticSC-Regular.ttf");
+}
+
+$font1: "Amatic SC",
+cursive;
+$color1: rgb(52, 73, 94);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font1;
+}
+
+h1 {
+    color: $color1;
+    font-size: 30px;
+}
+
+a {
+    color: $color1;
+    font-size: 25px;
+}
+
+header {
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    width: 150px;
+}
+
+.menu {
+    list-style: none;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    position: fixed;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(226, 218, 218, 0.747);
+    height: 50px;
+    width: 100%;
+}
+
+.article {
+    display: grid;
+    grid-template-rows: auto;
+    font-size: 20px;
+
+}
+
+#articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    clip-path: ellipse(50% 50%);
+}
+
+.img2 {
+    width: 100%;
+    height: auto;
+    clip-path: ellipse(50% 50%);
+}

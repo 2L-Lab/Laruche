@@ -1,0 +1,33 @@
+.navigation {
+  list-style: none;
+  width: 400px;
+  display: flex;
+}
+
+.menu {
+  list-style: none;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(226, 218, 218, 0.747);
+  height: 80px;
+  width: 100%;
+}
+
+li {
+  color: brown;
+  font-size: 25px;
+  margin: 0 15px;
+}
+
+a {
+  margin: 5px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+}
