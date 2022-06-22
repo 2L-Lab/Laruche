@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
 import sanityClient from "../client.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Post = () => {
   const [allPostsData, setAllPosts] = useState(null);
@@ -26,8 +25,11 @@ const Post = () => {
   }, []);
   return (
     <div className="all-post">
-      <h2>Mes dernier articles</h2>
-      <span></span>
+      <div className="divider">
+        <h2>Mes dernier articles</h2>
+        <i class="fa-solid fa-feather-pointed"></i>
+      </div>
+
       <div className="post-container">
         {allPostsData &&
           allPostsData.map((post, index) => <Card key={index} post={post} />)}

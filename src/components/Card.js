@@ -8,7 +8,11 @@ const Card = ({ post, index }) => {
         <span className="post" key={index}>
           <h2>{post.title}</h2>
           <span>
-            <img src={post.mainImage.asset.url} alt="" />
+            <img
+              className="pictureArticle"
+              src={post.mainImage.asset.url}
+              alt=""
+            />
           </span>
 
           <button>Lire la suite ...</button>

@@ -8,4 +8,15 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Amatic SC";
+  color: antiquewhite;
+}
+.app {
+  height: 1000px;
+}
+body {
+  background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%) fixed, no-repeat;
+  height: 100%;
+}
+h2 {
+  font-size: 35px;
 }

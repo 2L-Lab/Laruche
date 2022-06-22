@@ -9,12 +9,29 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Amatic SC";
+  color: antiquewhite;
+}
+
+.app {
+  height: 1000px;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#d9afd9), to(#97d9e1)) fixed, no-repeat;
+  background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%) fixed, no-repeat;
+  height: 100%;
+}
+
+h2 {
+  font-size: 35px;
 }
 
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
+  margin: 10px;
 }
 
 .post {
@@ -28,9 +45,27 @@
   width: 300px;
 }
 
-img {
+.pictureArticle {
   border-radius: 500px;
-  width: 300px;
+  width: 200px;
+  height: 200px;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  background: #6a6aa0;
+  border: solid 1px white;
+  border-radius: 100px;
+  width: 120px;
+}
+
+button:hover {
+  background: #39395e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .post-container {
@@ -38,11 +73,50 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  justify-items: center;
+  padding: 15px;
+  margin: 0 25px;
+}
+
+.divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 2px;
+  background-color: orange;
+  width: 50%;
+}
+
+.fa-solid,
+.fa-regular {
+  padding: 5px;
+  color: orange;
+  font-size: 30px;
 }
 
 .header-container {
-  background: url("../assets/img/La Ruche de Louise.png") center/cover;
+  background: url("../assets/img/laruchebg.png") center/cover;
   height: 100vh;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 58px;
 }
 
 .navigation {
@@ -78,6 +152,7 @@ li {
 
 a {
   margin: 5px;
+  text-decoration: none;
 }
 
 .logo {
@@ -85,5 +160,45 @@ a {
   top: 0;
   left: 0;
   width: 100px;
+}
+
+.about {
+  margin: 0 200px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.swiper {
+  width: 50%;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.produit {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=index.css.map */
