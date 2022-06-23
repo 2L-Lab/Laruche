@@ -9,7 +9,8 @@
         "components/_homeheaders.scss",
         "components/_menu.scss",
         "components/_about.scss",
-        "components/_swiper.scss"
+        "components/_swiper.scss",
+        "components/_onePost.scss"
     ],
     "names": [],
     "file": "index.css"

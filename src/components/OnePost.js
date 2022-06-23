@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
-
+import Headers from "./Headers.js";
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
@@ -40,31 +40,38 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div>
-      <div>
-        <h2>{postData.title}</h2>
+    <div className="header">
+      <Headers />
+      <div className="article-container">
         <div>
-          {postData.authorImage && (
+          <h3 className="article-title">{postData.title}</h3>
+          <div>
+            {postData.authorImage && (
+              <img
+                style={{ height: "200px", width: "250px" }}
+                src={urlFor(postData.authorImage).width(100).url()}
+                alt="Author is Kap"
+              />
+            )}
+          </div>
+        </div>
+        <div>
+          {postData.mainImage && (
             <img
-              src={urlFor(postData.authorImage).width(100).url()}
-              alt="Author is Kap"
+              className="article-image"
+              src={urlFor(postData.mainImage).width(200).url()}
+              alt=""
             />
           )}
-          <h4>{postData.name}</h4>
         </div>
-      </div>
-      <div>
-        {postData.mainImage && (
-          <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
-        )}
-      </div>
-
-      <div>
-        <BlockContent
-          blocks={postData.body}
-          projectId={sanityClient.clientConfig.projectId}
-          dataset={sanityClient.clientConfig.dataset}
-        />
+        <h4>{postData.name}</h4>
+        <div className="text-container">
+          <BlockContent
+            blocks={postData.body}
+            projectId={sanityClient.clientConfig.projectId}
+            dataset={sanityClient.clientConfig.dataset}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,28 @@
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.text-container {
+  margin: 50px 300px;
+  font-size: 25px;
+  background: rgba(106, 106, 160, 0.548);
+  border: solid 1px white;
+  border-radius: 15px;
+  padding: 10px;
+}
+.article-title {
+  font-size: 50px;
+  color: brown;
+  margin: 10px;
+  text-decoration: underline;
+}
+
+.article-image {
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+}
